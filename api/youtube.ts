@@ -16,7 +16,7 @@ dayjs.locale(ja);
 
 const GOOGLE_CLOUD_API_KEY = process.env.GOOGLE_CLOUD_API_KEY;
 
-type YoutubeInfo = {
+export type YoutubeInfo = {
   channelTitle: string;
   publishedAt: string;
   videoTitle: string;

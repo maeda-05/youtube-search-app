@@ -1,4 +1,5 @@
 import { searchYoutube } from "./api/youtube.js";
+import { downloadCSVSearchResult } from "./lib/json2csv.js";
 
 const searchByKeyword = async (keyword: string) => {
   try {
@@ -13,6 +14,7 @@ const searchByKeyword = async (keyword: string) => {
       return;
     } else {
       console.log(res);
+      downloadCSVSearchResult(res);
       return;
     }
   } catch (err) {
